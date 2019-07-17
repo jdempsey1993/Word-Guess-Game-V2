@@ -1,10 +1,14 @@
 // Create a word array for game vocabulary
 
 var words = ["monkey"]
+
 console.log("monkey")
 
 //Choose word
 
+var chooseWord = words[Math.floor(Math.random()*words.length)]
+
+console.log(chooseWord)
 //Display blanks to user "_"
 
 //Keypress function for letter input
@@ -25,6 +29,12 @@ console.log("monkey")
 
 // When letter values match word chosen
 
-        // Update numberOfWinds +1
+        // Update numberOfWins +1
 
         //Chose another word from the array
+
+//When user makes five incorrect guesses 
+
+        //Update numberofLosses +1
+
+        //Chose another word from array
