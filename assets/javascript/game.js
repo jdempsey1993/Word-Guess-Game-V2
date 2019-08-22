@@ -44,10 +44,49 @@ function Game ()    {
 
     // Console log variables
     console.log (randomWord)
+
     console.log(lettersOfWord)
+
     console.log(blanks)
+
     console.log(blanksAndCorrect)
 
 
 }
 
+// Game reset function
+function reset()    {
+    guessesRemaining = 9
+
+    wrongGuess = []
+
+    blanksAndCorrect = []
+    
+    Game()
+}
+
+// To check / compare letters
+
+function checkLetters(letter)   {
+    var letterInWord = false
+    // Generated word equal to letter , set variable true
+    for (var i = 0; i <blanks; i++) {
+        if (randomWord[i] == letter) {
+            letterInWord == true
+        }
+    }
+    //if letterInWord is false
+        if(letterInWord){
+            for(var i = 0; i< blanks; i++){
+                if (randomWord[i] == letter) {
+                    blanksAndCorrect[i] = letter
+                }
+            }
+        }
+        // push incorrect guess into wrong guess, lower number avail guesses
+        else {
+            wrongGuess.push(letter);
+            guessesRemaining--
+        }
+        console.log(blanksAndCorrect)
+}
