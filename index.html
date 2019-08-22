@@ -32,36 +32,61 @@
 
         <!--- Hold current word-->
 
-        
+        <div>
+
+            <h3 id="currentword">_ _ _ _ _</h3>
+
+        </div>
+
+        <div id="scoreboard">
+            
+            <!--- Hold the remaining guess-->
+            <div class="sidebar">
+                
+                <h3>
+                    Guesses remaining:
+                    <span id="guessesremaining"></span>
+                </h3>
+                
+            </div>
+
+            <!--- Count the number of wins-->
+            <div class="sidebar">
+
+                <h3>Wins:
+                   
+                    <span id="winstracker"></span>
+
+                </h3>
+
+            </div>
+
+            <!---Count the number of losses-->
+
+            <div class="sidebar">
+
+                <h3>Losses:
+                    <span id="losstracker"></span>
+                </h3>
+
+            </div>
+
+            <!---To hold wrong guesses-->
+
+            <div class="sidebar">
+
+                <h3>Letters guessed wrong:
+                    <spain id="playerguesses"></spain>
+                </h3>
+
+            </div>
+        </div>
 
     </div>
 
 </div>
 
-<!-----Creating div to show correct letters ---->
 
-<div id="correctLetters">
-
-</div>
-
-<!--Creating div to show user's letter guesses----->
-
-<div id="lettersGuessed">
-
-</div>
-
-
-<!--Container to update number of wins-->
-<div id="numberOfWins">
-
-</div>
-
-<!---Container to update number of losses-->
-<div id="numberOfLosses">
-
-
-
-</div>
 
 <!-- Linking to game's external javascript function---->
 <script src="assets/javascript/game.js "></script>
