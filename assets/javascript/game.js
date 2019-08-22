@@ -119,5 +119,28 @@ function complete() {
 
 }
 
+// Start the game
+Game()
 
+//Keypress function to start, lowercase letter and store user guesses
+
+document.onkeyup = function (event)    {
+    var guesses = String.fromCharCode(event.keyCode).toLowerCase()
+
+    // check to see if guess matches word value 
+
+    checkLetters(guesses)
+
+    // Check for wins/losses
+    
+    complete ()
+
+    // Store guess from player in console
+    
+    console.log(guesses)
+
+    // Display incorrect letters within HTML
+
+    document.getElementById("playerguesses").innerHTML = " " + wrongGuess.join(" ")
+}
 
