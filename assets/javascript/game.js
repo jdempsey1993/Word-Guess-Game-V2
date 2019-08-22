@@ -6,11 +6,32 @@ var words = ["monkey", "jaguar", "anaconda", "frog", "pirahna", "ant", "elephant
 
 console.log(words)
 
-//Choose word
+// Creating variable to hold values
 
-var chooseWord = words[Math.floor(Math.random()*words.length)]
+var randomWord = ""
+var lettersOfWord = []
+var blanks = 0
+var blanksAndCorrect = []
+var wrongGuess
 
-console.log(chooseWord)
+// Variables to hold the counters
+
+var wins = 0
+var losses = 0
+var guessesRemaining = 9
+
+///
+
+function Game ()    {
+    
+    // Generate random word from array
+    var chooseWord = words[Math.floor(Math.random()*words.length)]
+    console.log(chooseWord)
+
+
+}
+
+
 //Display blanks to user "_"
 var answerArray = []
     for (var i = 0; i < words.length; i++){
@@ -24,28 +45,3 @@ document.getElementById("demo").addEventListener("keypress",myFunction)
 function myFunction ("demo")
 
 
-//Update guess - submit letter value 
-
-    //Blank or non letter input - loop break
-
-    //More than one letter - alert user "One letter"
-
-    //One letter guess correct 
-
-        // Update correctLetters using documentgetelementbyid
-    
-    //One letter guess incorrect
-
-        // Update lettersGuessed using documentgetelementbyid
-
-// When letter values match word chosen
-
-        // Update numberOfWins +1
-
-        //Chose another word from the array
-
-//When user makes five incorrect guesses 
-
-        //Update numberofLosses +1
-
-        //Chose another word from array
