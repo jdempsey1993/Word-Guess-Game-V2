@@ -28,20 +28,26 @@ function Game ()    {
     var chooseWord = words[Math.floor(Math.random()*words.length)]
     console.log(chooseWord)
 
+    //Split words into arrays and store in an array
+    lettersOfWord = randomWord.split("")
+
+    //Blanks for length of word
+    blanks=lettersOfWord.length
+
+    //Loop for "_" of each letter 
+    for (var i = 0; i < blanks; i++)    {
+        blanksAndCorrect.push("_")
+    }
+    
+    // Document "_" to HTML
+    document.getElementById("currentword").innerHTML = " " + blanksAndCorrect.join(" ")
+
+    // Console log variables
+    console.log (randomWord)
+    console.log(lettersOfWord)
+    console.log(blanks)
+    console.log(blanksAndCorrect)
+
 
 }
-
-
-//Display blanks to user "_"
-var answerArray = []
-    for (var i = 0; i < words.length; i++){
-        answerArray[i] = "_"
-    }
-
-console.log(answerArray)
-//Keypress function for letter input
-
-document.getElementById("demo").addEventListener("keypress",myFunction)
-function myFunction ("demo")
-
 
