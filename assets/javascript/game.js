@@ -90,3 +90,34 @@ function checkLetters(letter)   {
         }
         console.log(blanksAndCorrect)
 }
+
+// To check win or loss 
+
+function complete() {
+    console.log ("wins:" = wins + " | losses:" + losses + "| guesses remaining:" + guessesRemaining)
+
+    // For a win, alert user
+    if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
+        wins++
+        reset()
+        // Document wins to screen
+        document.getElementById("winstracker".innerHTML=" " + wins)
+
+        // if user looses, then reset to a new round and inform user of loss
+
+    } else if (guessesRemaining === 0) {
+        losses++
+        reset()
+        document.getElementById("losstracker").innerHTML = " " + losses
+        
+        //then show losses in html and update guess counter
+
+    } 
+    document.getElementById("currentword").innerHTML = " " + blanksAndCorrect.join(" ")
+    document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining
+
+
+}
+
+
+
