@@ -1,2 +1,2 @@
 # Word-Guess-Game-V2
-Updated version of HW Assignment 3
+Updated word guess game
