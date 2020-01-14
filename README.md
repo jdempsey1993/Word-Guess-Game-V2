@@ -1,2 +1,2 @@
 # Word-Guess-Game-V2
-Updated word guess game
+A game to guess words out of a set array.
